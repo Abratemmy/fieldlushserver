@@ -7,6 +7,7 @@ import compression from "compression";
 
 
 import productRoutes from './routes/products.js';
+import testimonyRoutes from './routes/testimony.js';
 
 
 const app = express();
@@ -28,6 +29,7 @@ app.use(compression({
 
 // app.use('/user', userRoutes);
 app.use('/products', productRoutes);
+app.use('/testimonys', testimonyRoutes);
 // app.use('/category', categoryRoutes)
 
 app.get('/', (req, res) => {
