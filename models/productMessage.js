@@ -13,6 +13,7 @@ const productSchema = mongoose.Schema({
     duration: String,
     rol: String,
     message: String,
+    video: String,
     createdAt: {
         type: Date,
         default: new Date()
@@ -21,5 +22,5 @@ const productSchema = mongoose.Schema({
 })
 productSchema.plugin(AutoIncrement, { inc_field: 'id' });
 // postSchema.plugin(AutoIncrement)
-const ProductMessage = mongoose.model('ProductMessage', productSchema);
+const ProductMessage = mongoose.model('FieldlushProduct', productSchema);
 export default ProductMessage;
